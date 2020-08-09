@@ -16,22 +16,46 @@
 <script
     src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 <style type="text/css">
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #B3C9DA;
+}
 .semere {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+/* Add padding to container elements */
+ .container {
+  padding: 16px;
+}
+.header-right {
+  float: right;
+}
 </style>
 </head>
 <body>
 	<div class="container">
-  <div class="jumbotron">
+  <div class="jumbotron" style="background-color:#ABC123">
+  <img src="logoairlines.png" style="height:220px;">
+   <div class="header-right">
+   <br>
+      <br>
+   
     <h1>WelCOme to Signup Page</h1>
     <p>Chiluminati is the most popular Airline for travelling around the globe. Explore daily!!</p>
-  </div>
+    </div>
+    </div>
   <hr/>
   <form action="" style="border:1px solid #ccc">
-  <div class="container">
+  <div class="container" style="background-color:#3ab8BD">
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
@@ -55,15 +79,13 @@
     </label>
     <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
     <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Sign Up</button>
+      <button type="button" class="btn btn-success">Sign Up</button>
+      <button type="button" class="btn btn-danger">Cancel</button>
     </div>
   </div>
 </form>
 </body>
 </html>
-
-
 
 
 

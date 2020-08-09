@@ -11,13 +11,28 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   
 </head>
-  <header  style="height: 220px;background-color: #aaaaaa;">
-     <img src="logoairlines.png" style="height:220px;">
+ 
+ <style>
+    h1 { color: #FF0000; }
+    
+    .header {
+  
+  text-align: center;
+  
+}
+.Logo{
+padding-left: 4px;
+  padding: 4px;
+  float: left;
+  
+}
+  </style>
+   <header  style="height: 170px;background-color: #abc123;">
+    <div class="Logo"> <img src="logoairlines.png" style="height:150px;"></div>
        
       
   </header>
  
-
 <body>
  
   
@@ -28,7 +43,7 @@
 		   <marquee scrolldelay="100" direction="right">  ${hmmmm}</marquee>  
 		 </span>
 		
-		 <h1>Sign in with your User name/Email</h1>
+		 <h1 >Sign in with your User name/Email</h1>
   <lable>Username/Email</lable>
    <input type="text"  name="username"  class="form-control" style="width: 50%;">
    <br/>

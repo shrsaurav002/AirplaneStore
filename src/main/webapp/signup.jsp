@@ -36,21 +36,26 @@ body {font-family: Arial, Helvetica, sans-serif;}
  .container {
   padding: 16px;
 }
-.header-right {
-  float: right;
+.header {
+  
+  text-align: center;
+  
+}
+.Logo{
+  
+  float: left;
+  
 }
 </style>
 </head>
 <body>
-	<div class="container">
+	
   <div class="jumbotron" style="background-color:#ABC123">
-  <img src="logoairlines.png" style="height:220px;">
-   <div class="header-right">
-   <br>
-      <br>
-   
-    <h1>WelCome to Signup Page</h1>
-    <p>Chiluminati is the most popular Airline for travelling around the globe. Explore daily!!</p>
+   <div class="header">
+    <div class="Logo">
+ <img src="logoairlines.png"  style="height:150px;"></div>
+    <h1>WelCome to Sign up Page</h1>
+    <p><h5>Chiluminati is the most popular Airline for travelling around the globe. Explore daily!!</h5></p>
     </div>
     </div>
   <hr/>
@@ -79,7 +84,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
     </label>
     <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
     <div class="clearfix">
-      <button type="button" class="btn btn-success">Sign Up</button>
+      <button type="submit" class="btn btn-success">Sign Up</button>
       <button type="button" class="btn btn-danger">Cancel</button>
     </div>
   </div>

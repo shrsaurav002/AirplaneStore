@@ -3,6 +3,7 @@
 <html>
 <head>
 <title>Login Page</title>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -11,6 +12,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   
 </head>
+
  
  <style>
     h1 { color: #FF0000; }
@@ -31,6 +33,9 @@ padding-left: 4px;
     <div class="Logo"> <img src="logoairlines.png" style="height:150px;"></div>
        
       
+
+
+
   </header>
  
 <body>

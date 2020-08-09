@@ -83,7 +83,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
       <button type="button" class="btn btn-danger">Cancel</button>
     </div>
   </div>
-</form>
+</form></div>
 </body>
 </html>
 

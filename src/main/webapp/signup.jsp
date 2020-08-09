@@ -49,7 +49,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
    <br>
       <br>
    
-    <h1>WelCOme to Signup Page</h1>
+    <h1>WelCome to Signup Page</h1>
     <p>Chiluminati is the most popular Airline for travelling around the globe. Explore daily!!</p>
     </div>
     </div>

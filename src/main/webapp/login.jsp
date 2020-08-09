@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Login Page</title>
- <img src="logoairlines.PNG" style="height:220px;">
+ 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -13,7 +13,7 @@
 <body>
   <header  style="height: 30px;background-color: #2196f3;">
      
-       
+       <img src="logoairlines.PNG" style="height:220px;">
       
   </header>
   

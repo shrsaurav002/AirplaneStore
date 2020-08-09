@@ -1,21 +1,25 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <title>Login Page</title>
- <img src="logoairlines.PNG" style="height:220px;">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  
 </head>
-<body>
-  <header  style="height: 30px;background-color: #2196f3;">
-     
+  <header  style="height: 220px;background-color: #aaaaaa;">
+     <img src="logoairlines.png" style="height:220px;">
        
       
   </header>
+ 
+
+<body>
+ 
   
   <hr/>
   <form action="auth">
@@ -23,7 +27,8 @@
 		 <span  id="message"  style="color:red;font-size: 16px;font-weight: bold;">
 		   <marquee scrolldelay="100" direction="right">  ${hmmmm}</marquee>  
 		 </span>
-		 <p class="message-color base-font">Sign in with your User name/Email</p>
+		
+		 <h1>Sign in with your User name/Email</h1>
   <lable>Username/Email</lable>
    <input type="text"  name="username"  class="form-control" style="width: 50%;">
    <br/>

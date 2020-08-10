@@ -37,9 +37,9 @@ padding-left: 4px;
  
 <body>
  
-  
+
   <hr/>
-  <form action="auth">
+  <form action="auth" method="post">
  	<div class="container">
 		 <span  id="message"  style="color:red;font-size: 16px;font-weight: bold;">
 		   <marquee scrolldelay="100" direction="right">  ${hmmmm}</marquee>  
@@ -47,7 +47,7 @@ padding-left: 4px;
 		
 		 <h1 >Sign in with your Username/Email</h1>
   <lable>Username/Email</lable>
-   <input type="text"  name="username"  class="form-control" style="width: 50%;">
+   <input type="text"  name="usernameOrEmail"  class="form-control" style="width: 50%;">
    <br/>
    <lable>Password</lable>
    <input type="password"  name="password"  class="form-control" style="width: 50%;">

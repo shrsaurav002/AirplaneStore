@@ -27,7 +27,7 @@ public class AuthController {
 
 	@PostMapping("/auth")
 	public String authUser(@RequestParam String usernameOrEmail, @RequestParam String password, HttpSession session,Model model) {
-		CustomerDTO customerDTO = customerService.authUser(usernameOrEmail,password);
+		CustomerDTO customerDTO = customerService.authUser(usernameOrEmail,usernameOrEmail,password);
 
 		if(customerDTO!=null) {
 		   	

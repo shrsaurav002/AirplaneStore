@@ -18,6 +18,6 @@ public interface CustomerService {
 
 	CustomerDTO bookFlight(CustomerDTO customerDTO);
 
-	CustomerDTO authUser(String usernameOrEmail, String password);
+	CustomerDTO authUser(String usernameOrEmail,String pusernameOrEmail, String password);
 
 }

@@ -36,9 +36,9 @@ public class CustomerServiceImpl implements CustomerService {
 	}
 
 	@Override
-	public CustomerDTO authUser(String usernameOrEmail, String password) {
+	public CustomerDTO authUser(String usernameOrEmail, String pusernameOrEmail,String password) {
 
-		Optional<CustomerEntity> optional = daoRepository.findByUsernameOrEmailAndPassword(usernameOrEmail, password);
+		Optional<CustomerEntity> optional = daoRepository.findByUsernameOrEmailAndPassword(usernameOrEmail,usernameOrEmail, password);
 
 		return convertToDTO(optional);
 	}

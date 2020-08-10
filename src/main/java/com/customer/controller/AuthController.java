@@ -12,34 +12,39 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.customer.dto.CustomerDTO;
 import com.customer.service.CustomerService;
 
-
-
 @Controller
 public class AuthController {
-	
 	@Autowired
-	private CustomerService customerService;	
+	private CustomerService customerService;
 
-	@GetMapping({ "/", "/auth" })
+	@GetMapping({ "/", "/login" })
 	public String authform() {
 		return "login";
 	}
 
-	@PostMapping("/auth")
-	public String authUser(@RequestParam String usernameOrEmail, @RequestParam String password, HttpSession session,Model model) {
-		CustomerDTO customerDTO = customerService.authUser(usernameOrEmail,usernameOrEmail,password);
+	@GetMapping({ "result" })
+	public String showResult() {
+		return "flightResults";
+	}
 
-		if(customerDTO!=null) {
-		   	
-		   session.setAttribute("userData", customerDTO);
-		   
-		  return "signup";
-	  }else {  
-		  model.addAttribute("hmmmm", "Sorry , usernameoremail and password are not correct");
-		  return "login";
 	
+	@PostMapping("/auth")
+	public String authUser(@RequestParam String usernameOrEmail, @RequestParam String password, HttpSession session,
+			Model model) {
+		// CustomerDTO customerDTO = customerService.authUser(usernameOrEmail,
+		// password);
+		CustomerDTO customerDTO = customerService.authUser(usernameOrEmail, usernameOrEmail, password);
 
+		if (customerDTO != null) {
+
+			session.setAttribute("userData", customerDTO);
+
+			return "signup";
+		} else {
+			model.addAttribute("hmmmm", "Sorry , usernameoremail and password are not correct");
+			return "login";
+
+		}
 	}
-	}
+
 }
-

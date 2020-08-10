@@ -2,13 +2,17 @@ package com.customer.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.customer.dto.FullName;
 
 @Entity
 @Table(name = "customer_tbl")
 public class CustomerEntity {
 	@Id
+	@GeneratedValue
 	@Column
 	private int cid;
 	@Column
@@ -16,14 +20,24 @@ public class CustomerEntity {
 	@Column
 	private String password;
 	@Column
-	private Fullname fullname;
+	private FullName fullName;
 	@Column
 	private String email;
 	@Column
 	private String phone;
+	@Column
+	private String gender;
 
 	public int getCid() {
 		return cid;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
 	public void setCid(int cid) {
@@ -46,12 +60,12 @@ public class CustomerEntity {
 		this.password = password;
 	}
 
-	public Fullname getFullname() {
-		return fullname;
+	public FullName getFullName() {
+		return fullName;
 	}
 
-	public void setFullname(Fullname fullname) {
-		this.fullname = fullname;
+	public void setFullName(FullName fullName) {
+		this.fullName = fullName;
 	}
 
 	public String getEmail() {
@@ -72,16 +86,16 @@ public class CustomerEntity {
 
 	@Override
 	public String toString() {
-		return "ProfileEntity [cid=" + cid + ", username=" + username + ", password=" + password + ", fullname="
-				+ fullname + ", email=" + email + ", phone=" + phone + "]";
+		return "ProfileEntity [cid=" + cid + ", username=" + username + ", password=" + password + ", fullName="
+				+ fullName + ", email=" + email + ", phone=" + phone + "]";
 	}
 
-	public CustomerEntity(int cid, String username, String password, Fullname fullname, String email, String phone) {
+	public CustomerEntity(int cid, String username, String password, FullName fullName, String email, String phone) {
 		super();
 		this.cid = cid;
 		this.username = username;
 		this.password = password;
-		this.fullname = fullname;
+		this.fullName = fullName;
 		this.email = email;
 		this.phone = phone;
 	}

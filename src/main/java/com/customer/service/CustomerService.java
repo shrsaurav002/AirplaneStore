@@ -6,18 +6,18 @@ import com.customer.dto.CustomerDTO;
 import com.customer.entity.CustomerEntity;
 
 public interface CustomerService {
+	CustomerDTO authUser(String usernameOrEmail, String pusernameOrEmail, String password);
 
+	String signUp(CustomerDTO customerDTO);
 
-	CustomerDTO signUp(CustomerDTO customerDTO);
+	String login(String username, String password);
 
-	public String fUsername(String email);
-
-	public String fPassword(String email);
+	String fPassword(String email);
 
 	List<CustomerEntity> findByCity();
 
 	CustomerDTO bookFlight(CustomerDTO customerDTO);
 
-	CustomerDTO authUser(String usernameOrEmail,String pusernameOrEmail, String password);
+	String fUsername(String email);
 
 }

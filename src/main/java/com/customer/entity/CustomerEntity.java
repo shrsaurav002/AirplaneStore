@@ -2,13 +2,16 @@ package com.customer.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
 
 @Entity
 @Table(name = "customer_tbl")
 public class CustomerEntity {
 	@Id
+	@GeneratedValue
 	@Column
 	private int cid;
 	@Column
@@ -16,14 +19,24 @@ public class CustomerEntity {
 	@Column
 	private String password;
 	@Column
-	private Fullname fullname;
+	private FullName fullname;
 	@Column
 	private String email;
 	@Column
 	private String phone;
+	@Column
+	private String gender;
 
 	public int getCid() {
 		return cid;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
 	public void setCid(int cid) {
@@ -46,11 +59,11 @@ public class CustomerEntity {
 		this.password = password;
 	}
 
-	public Fullname getFullname() {
+	public FullName getFullname() {
 		return fullname;
 	}
 
-	public void setFullname(Fullname fullname) {
+	public void setFullname(FullName fullname) {
 		this.fullname = fullname;
 	}
 
@@ -76,7 +89,7 @@ public class CustomerEntity {
 				+ fullname + ", email=" + email + ", phone=" + phone + "]";
 	}
 
-	public CustomerEntity(int cid, String username, String password, Fullname fullname, String email, String phone) {
+	public CustomerEntity(int cid, String username, String password, FullName fullname, String email, String phone) {
 		super();
 		this.cid = cid;
 		this.username = username;

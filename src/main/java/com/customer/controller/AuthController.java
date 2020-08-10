@@ -30,6 +30,7 @@ public class AuthController {
 		 * if (true) return "dashboard"; else return "error";
 		 */
 		return "success";
-
 	}
+	
+	
 }

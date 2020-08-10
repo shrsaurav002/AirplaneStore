@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.customer.dto.FullName;
 
 @Entity
 @Table(name = "customer_tbl")
@@ -19,7 +20,7 @@ public class CustomerEntity {
 	@Column
 	private String password;
 	@Column
-	private FullName fullname;
+	private FullName fullName;
 	@Column
 	private String email;
 	@Column
@@ -59,12 +60,12 @@ public class CustomerEntity {
 		this.password = password;
 	}
 
-	public FullName getFullname() {
-		return fullname;
+	public FullName getFullName() {
+		return fullName;
 	}
 
-	public void setFullname(FullName fullname) {
-		this.fullname = fullname;
+	public void setFullName(FullName fullName) {
+		this.fullName = fullName;
 	}
 
 	public String getEmail() {
@@ -85,16 +86,16 @@ public class CustomerEntity {
 
 	@Override
 	public String toString() {
-		return "ProfileEntity [cid=" + cid + ", username=" + username + ", password=" + password + ", fullname="
-				+ fullname + ", email=" + email + ", phone=" + phone + "]";
+		return "ProfileEntity [cid=" + cid + ", username=" + username + ", password=" + password + ", fullName="
+				+ fullName + ", email=" + email + ", phone=" + phone + "]";
 	}
 
-	public CustomerEntity(int cid, String username, String password, FullName fullname, String email, String phone) {
+	public CustomerEntity(int cid, String username, String password, FullName fullName, String email, String phone) {
 		super();
 		this.cid = cid;
 		this.username = username;
 		this.password = password;
-		this.fullname = fullname;
+		this.fullName = fullName;
 		this.email = email;
 		this.phone = phone;
 	}

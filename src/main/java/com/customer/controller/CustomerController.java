@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.customer.dto.CustomerDTO;
-import com.customer.entity.FullName;
+import com.customer.dto.FullName;
 import com.customer.service.CustomerService;
 import com.customer.utils.UsernameGenerator;
 
@@ -16,7 +16,7 @@ import com.customer.utils.UsernameGenerator;
 public class CustomerController {
 
 	@Autowired
-	CustomerService customerService;
+	private CustomerService customerService;
 
 	@GetMapping("/signup")
 	public String showSignup() {

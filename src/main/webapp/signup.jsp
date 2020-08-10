@@ -52,26 +52,35 @@ body {font-family: Arial, Helvetica, sans-serif;}
 	
   <div class="jumbotron" style="background-color:#ABC123">
    <div class="header">
+   
     <div class="Logo">
  <img src="logoairlines.png"  style="height:150px;"></div>
     <h1>WelCome to Sign up Page</h1>
     <p><h5>Chiluminati is the most popular Airline for travelling around the globe. Explore daily!!</h5></p>
+     <span  id="message"  style="color:red;font-size: 16px;font-weight: bold;">
+		   <marquee scrolldelay="100" direction="right">  ${hmmmm}</marquee>  
+		 </span>
+		
     </div>
     </div>
   <hr/>
-  <form action="" style="border:1px solid #ccc">
+  <form action="signup" method="post" style="border:1px solid #ccc">
   <div class="container" style="background-color:#3ab8BD">
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
-    <label for="fname"><b>First Name</b></label>
-    <input type="text" placeholder="Enter F.Name" name="fname" required>
-    <label for="lname"><b>Last Name</b></label>
-    <input type="text" placeholder="Enter l.Name" name="lname" required>
+    <label for="fName"><b>First Name</b></label>
+    <input type="text" placeholder="Enter F.Name" name="fName" required>
+    <label for="mName"><b>Middle Name</b></label>
+    <input type="text" placeholder="Enter M.Name" name="mName" required>
+    <label for="lName"><b>Last Name</b></label>
+    <input type="text" placeholder="Enter l.Name" name="lName" required>
     <label for="email"><b>Email</b></label>
     <input type="text" placeholder="Enter Email" name="email" required>
+    <label for="phone"><b>Phone</b></label>
+    <input type="text" placeholder="Enter Phone Number" name="phone" required>
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Enter Password" name="password" required>
     <label for="psw-repeat"><b>Repeat Password</b></label>
     <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
     <label>Gender</label>

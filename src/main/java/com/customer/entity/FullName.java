@@ -3,7 +3,7 @@ package com.customer.entity;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class Fullname {
+public class FullName {
 	private String fName;
 	private String mName;
 	private String lName;
@@ -32,7 +32,7 @@ public class Fullname {
 		this.lName = lName;
 	}
 
-	public Fullname() {
+	public FullName() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -42,7 +42,7 @@ public class Fullname {
 		return "Fullname [fName=" + fName + ", mName=" + mName + ", lName=" + lName + "]";
 	}
 
-	public Fullname(String fName, String mName, String lName) {
+	public FullName(String fName, String mName, String lName) {
 		super();
 		this.fName = fName;
 		this.mName = mName;

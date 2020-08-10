@@ -2,15 +2,29 @@ package com.customer.service;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
+import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.customer.dto.CustomerDTO;
 import com.customer.entity.CustomerEntity;
+import com.customer.jpa.DaoRepository;
 
-public class CustomerServiceImpl implements CustomerServie {
+@Service
+@Transactional
+public class CustomerServiceImpl implements CustomerService {
+	
+	@Autowired
+	private DaoRepository daoRepository;
 
 	@Override
-	public CustomerDTO signUp(CustomerDTO customerDTO) {
-		// TODO Auto-generated method stub
-		return null;
+	public String signUp(CustomerDTO customerDTO) {
+		CustomerEntity customerEntity = new CustomerEntity();
+		BeanUtils.copyProperties(customerDTO, customerEntity);
+		daoRepository.save(customerEntity);
+		return "success";
 	}
 
 	@Override

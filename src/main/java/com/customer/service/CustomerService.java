@@ -5,10 +5,10 @@ import java.util.List;
 import com.customer.dto.CustomerDTO;
 import com.customer.entity.CustomerEntity;
 
-public interface CustomerServie {
+public interface CustomerService {
 
 
-	CustomerDTO signUp(CustomerDTO customerDTO);
+	public String signUp(CustomerDTO customerDTO);
 
 	public String login(String username, String password);
 

@@ -1,34 +1,33 @@
 package com.customer.dto;
 
-import com.customer.entity.Fullname;
+import com.customer.entity.FullName;
 
 public class CustomerDTO {
 	private int cid;
 	private String username;
 	private String password;
-	private Fullname fullname;
+	private FullName fullName;
 	private String email;
 	private String phone;
+	private String gender;
 
 	public CustomerDTO() {
 		super();
 	}
 
-	public CustomerDTO(int cid, String username, String password, Fullname fullname, String email, String phone) {
+	
+	public CustomerDTO(int cid, String username, String password, FullName fullName, String email, String phone,
+			String gender) {
 		super();
 		this.cid = cid;
 		this.username = username;
 		this.password = password;
-		this.fullname = fullname;
+		this.fullName = fullName;
 		this.email = email;
 		this.phone = phone;
+		this.gender = gender;
 	}
-
-	@Override
-	public String toString() {
-		return "CustomerDTO [cid=" + cid + ", username=" + username + ", password=" + password + ", fullname="
-				+ fullname + ", email=" + email + ", phone=" + phone + "]";
-	}
+	
 
 	@Override
 	public int hashCode() {
@@ -36,12 +35,14 @@ public class CustomerDTO {
 		int result = 1;
 		result = prime * result + cid;
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
-		result = prime * result + ((fullname == null) ? 0 : fullname.hashCode());
+		result = prime * result + ((fullName == null) ? 0 : fullName.hashCode());
+		result = prime * result + ((gender == null) ? 0 : gender.hashCode());
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
 		result = prime * result + ((phone == null) ? 0 : phone.hashCode());
 		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		return result;
 	}
+
 
 	@Override
 	public boolean equals(Object obj) {
@@ -59,10 +60,15 @@ public class CustomerDTO {
 				return false;
 		} else if (!email.equals(other.email))
 			return false;
-		if (fullname == null) {
-			if (other.fullname != null)
+		if (fullName == null) {
+			if (other.fullName != null)
 				return false;
-		} else if (!fullname.equals(other.fullname))
+		} else if (!fullName.equals(other.fullName))
+			return false;
+		if (gender == null) {
+			if (other.gender != null)
+				return false;
+		} else if (!gender.equals(other.gender))
 			return false;
 		if (password == null) {
 			if (other.password != null)
@@ -81,6 +87,14 @@ public class CustomerDTO {
 			return false;
 		return true;
 	}
+
+
+	@Override
+	public String toString() {
+		return "CustomerDTO [cid=" + cid + ", username=" + username + ", password=" + password + ", fullName="
+				+ fullName + ", email=" + email + ", phone=" + phone + ", gender=" + gender + "]";
+	}
+
 
 	public int getCid() {
 		return cid;
@@ -106,14 +120,6 @@ public class CustomerDTO {
 		this.password = password;
 	}
 
-	public Fullname getFullname() {
-		return fullname;
-	}
-
-	public void setFullname(Fullname fullname) {
-		this.fullname = fullname;
-	}
-
 	public String getEmail() {
 		return email;
 	}
@@ -129,5 +135,27 @@ public class CustomerDTO {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+
+
+	public FullName getFullName() {
+		return fullName;
+	}
+
+
+	public void setFullName(FullName fullName) {
+		this.fullName = fullName;
+	}
+
+
+	public String getGender() {
+		return gender;
+	}
+
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	
 
 }

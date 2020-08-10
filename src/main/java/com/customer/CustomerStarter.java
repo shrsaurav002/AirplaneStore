@@ -8,7 +8,5 @@ public class CustomerStarter {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CustomerStarter.class, args);
-
 	}
-
 }

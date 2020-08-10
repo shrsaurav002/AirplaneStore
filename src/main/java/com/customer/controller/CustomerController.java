@@ -27,7 +27,6 @@ public class CustomerController {
 	public String createSignup(@ModelAttribute CustomerDTO customerDTO,@ModelAttribute FullName fullName
 			, Model model) {
 		customerDTO.setFullName(fullName);
-		System.out.println(customerDTO.toString());
 		String username= UsernameGenerator.usernameGenerator(customerDTO.getFullName());
 		customerDTO.setUsername(username);
 		customerService.signUp(customerDTO);

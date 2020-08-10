@@ -23,6 +23,7 @@ public class CustomerServiceImpl implements CustomerService {
 	public String signUp(CustomerDTO customerDTO) {
 		CustomerEntity customerEntity = new CustomerEntity();
 		BeanUtils.copyProperties(customerDTO, customerEntity);
+		customerEntity.setFullname(customerDTO.getFullName());
 		daoRepository.save(customerEntity);
 		return "success";
 	}

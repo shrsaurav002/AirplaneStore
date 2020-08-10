@@ -2,6 +2,7 @@ package com.customer.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -10,6 +11,7 @@ import javax.persistence.Table;
 @Table(name = "customer_tbl")
 public class CustomerEntity {
 	@Id
+	@GeneratedValue
 	@Column
 	private int cid;
 	@Column
@@ -27,6 +29,14 @@ public class CustomerEntity {
 
 	public int getCid() {
 		return cid;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
 	public void setCid(int cid) {

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +14,7 @@
 
  
  <style>
-    h1 { color: #FF0000; }
+    h1 { color: #FF1200; }
     
     .header {
   
@@ -28,12 +27,10 @@ padding-left: 4px;
   float: left;
   
 }
+
   </style>
    <header  style="height: 170px;background-color: #abc123;">
     <div class="Logo"> <img src="logoairlines.png" style="height:150px;"></div>
-       
-      
-
 
 
   </header>
@@ -48,13 +45,16 @@ padding-left: 4px;
 		   <marquee scrolldelay="100" direction="right">  ${hmmmm}</marquee>  
 		 </span>
 		
-		 <h1 >Sign in with your User name/Email</h1>
+		 <h1 >Sign in with your Username/Email</h1>
   <lable>Username/Email</lable>
    <input type="text"  name="username"  class="form-control" style="width: 50%;">
    <br/>
    <lable>Password</lable>
    <input type="password"  name="password"  class="form-control" style="width: 50%;">
    <br/>
+    <label>
+      <input type="checkbox"  name="remember" style="margin-bottom:15px"> Remember me
+    </label>
    <p class="secondary">
 			<a class="link" id="go-to-forgot-password" href="forgot.jsp" >
 Forgot your password?			</a>

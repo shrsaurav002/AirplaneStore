@@ -8,7 +8,7 @@ import com.customer.entity.CustomerEntity;
 public interface CustomerService {
 
 
-	CustomerDTO signUp(CustomerDTO customerDTO);
+	public String signUp(CustomerDTO customerDTO);
 
 	public String fUsername(String email);
 

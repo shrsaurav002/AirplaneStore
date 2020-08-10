@@ -1,5 +1,6 @@
 package com.customer.jpa;
 
+<<<<<<< HEAD
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,3 +13,12 @@ public interface DaoRepository extends JpaRepository<CustomerEntity, String> {
 	Optional<CustomerEntity> findByUsernameOrEmailAndPassword(String pusernameEmail, String usernameEmail, String password);
 
 }
+=======
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.customer.entity.CustomerEntity;
+
+public interface DaoRepository extends JpaRepository<CustomerEntity, Integer> {
+
+}
+>>>>>>> origin/Suman

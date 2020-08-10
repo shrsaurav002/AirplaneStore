@@ -5,12 +5,10 @@ import java.util.List;
 import com.customer.dto.CustomerDTO;
 import com.customer.entity.CustomerEntity;
 
-public interface CustomerServie {
+public interface CustomerService {
 
 
 	CustomerDTO signUp(CustomerDTO customerDTO);
-
-	public String login(String username, String password);
 
 	public String fUsername(String email);
 
@@ -19,5 +17,7 @@ public interface CustomerServie {
 	List<CustomerEntity> findByCity();
 
 	CustomerDTO bookFlight(CustomerDTO customerDTO);
+
+	CustomerDTO authUser(String usernameOrEmail,String pusernameOrEmail, String password);
 
 }

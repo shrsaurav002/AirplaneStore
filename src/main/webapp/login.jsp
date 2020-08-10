@@ -29,14 +29,7 @@ padding-left: 4px;
   
 }
   </style>
-   <header  style="height: 170px;background-color: #abc123;">
-    <div class="Logo"> <img src="logoairlines.png" style="height:150px;"></div>
-       
-      
-
-
-
-  </header>
+  <%@include file="header.jsp" %>
  
 <body>
  

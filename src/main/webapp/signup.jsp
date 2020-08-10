@@ -84,7 +84,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
     </label>
     <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
     <div class="clearfix">
+    
       <button type="submit" class="btn btn-success">Sign Up</button>
+       <a href="login.jsp"><button type="button" class="btn btn-secondary">Login</button></a>
       <button type="button" class="btn btn-danger">Cancel</button>
     </div>
   </div>

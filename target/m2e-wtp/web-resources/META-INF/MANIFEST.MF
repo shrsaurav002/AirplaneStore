@@ -1,6 +1,8 @@
 Manifest-Version: 1.0
+Build-Jdk-Spec: 14
 Implementation-Title: AirplaneProject
 Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor: Pivotal Software, Inc.
 Built-By: Suman
 Implementation-Vendor-Id: com.airplane
 Build-Jdk: 1.8.0_251

@@ -2,11 +2,13 @@ package com.customer.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "flight_tbl")
 public class FlightEntity {
+	@Id
 	@Column
 	private String fid;
 	@Column

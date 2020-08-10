@@ -10,7 +10,7 @@
 <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.5.RELEASE</version>
+		<version>2.3.1.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	
@@ -23,10 +23,19 @@
 	<dependencies>
         <!-- Spring boot web -->
 		<dependency>
-			<!-- Setup Spring Boot -->
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+    <exclusions>
+        <exclusion>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-logging</artifactId>
+        </exclusion>
+    </exclusions>
+</dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-log4j2</artifactId>
+</dependency>
 
 
 	   <!-- If you do some change then container will automatically starts -->
@@ -55,11 +64,12 @@
 	</dependency>
 
 	<!-- This is used to connect java with mysql database -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <version>8.0.20</version>
+</dependency>
 
 	<!-- Below will download spring data + jpa+ hibernate etc -->
 		<dependency>
@@ -72,6 +82,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
+        
+        
+        
+        <!-- https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk -->
+<!-- <dependency>
+    <groupId>com.amazonaws</groupId>
+    <artifactId>aws-java-sdk</artifactId>
+    <version>1.11.837</version>
+</dependency> -->
+
+
 
 	</dependencies>
 </project>

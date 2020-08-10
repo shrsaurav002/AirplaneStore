@@ -30,7 +30,7 @@ padding-left: 4px;
 }
   </style>
    <header  style="height: 170px;background-color: #abc123;">
-    <div class="Logo"> <img src="logoairlines.png" style="height:150px;"></div>
+    <div class="Logo"> <img src="img/logoairlines.png" style="height:150px;"></div>
        
       
 
@@ -61,7 +61,7 @@ Forgot your password?			</a>
 		</p>
    <button type="submit" class="btn btn-primary">Login</button>
    <button type="reset" class="btn btn-danger">Clear</button>
-      <a href="signup.jsp">
+      <a href="signup">
       
       <button type="button" class="btn btn-info">Signup</button>
      </a>

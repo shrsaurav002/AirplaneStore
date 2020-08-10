@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class AuthController {
-	@GetMapping({ "/", "/auth" })
+	@GetMapping({ "/", "/auth","/login" })
 	public String authform() {
 		return "login";
 	}
@@ -21,4 +21,18 @@ public class AuthController {
 		return "success";
 
 	}
+	
+	@GetMapping("/signup")
+	public String signup() {
+		return "signup";
+		
+	}
+	
+	@GetMapping("/flight")
+	public String flight() {
+		return "flight";
+		
+	}
+	
+	
 }

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class AuthController {
 	@GetMapping({ "/", "/auth" })
 	public String authform() {
-		return "index";
+		return "login";
 	}
 
 	@PostMapping("/auth")

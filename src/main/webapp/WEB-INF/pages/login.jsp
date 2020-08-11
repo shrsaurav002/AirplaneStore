@@ -30,7 +30,7 @@ padding-left: 4px;
 }
   </style>
    <header  style="height: 170px;background-color: #abc123;">
-    <div class="Logo"> <img src="logoairlines.png" style="height:150px;"></div>
+    <div class="Logo"> <img src="img/logoairlines.png" style="height:150px;"></div>
        
       
 
@@ -42,7 +42,7 @@ padding-left: 4px;
  
   
   <hr/>
-  <form action="auth">
+  <form action="auth" method="post">
  	<div class="container">
 		 <span  id="message"  style="color:red;font-size: 16px;font-weight: bold;">
 		   <marquee scrolldelay="100" direction="right">  ${hmmmm}</marquee>  
@@ -50,7 +50,7 @@ padding-left: 4px;
 		
 		 <h1 >Sign in with your User name/Email</h1>
   <lable>Username/Email</lable>
-   <input type="text"  name="username"  class="form-control" style="width: 50%;">
+   <input type="text"  name="usernameOrEmail"  class="form-control" style="width: 50%;">
    <br/>
    <lable>Password</lable>
    <input type="password"  name="password"  class="form-control" style="width: 50%;">
@@ -61,7 +61,7 @@ Forgot your password?			</a>
 		</p>
    <button type="submit" class="btn btn-primary">Login</button>
    <button type="reset" class="btn btn-danger">Clear</button>
-      <a href="signup.jsp">
+      <a href="signup">
       
       <button type="button" class="btn btn-info">Signup</button>
      </a>

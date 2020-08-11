@@ -1,6 +1,6 @@
 package com.customer.utils;
 
-import com.customer.entity.FullName;
+import com.customer.dto.FullName;
 
 public class UsernameGenerator {
 

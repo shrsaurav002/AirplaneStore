@@ -1,7 +1,5 @@
 package com.customer.dto;
 
-import com.customer.entity.FullName;
-
 public class CustomerDTO {
 	private int cid;
 	private String username;
@@ -15,7 +13,6 @@ public class CustomerDTO {
 		super();
 	}
 
-	
 	public CustomerDTO(int cid, String username, String password, FullName fullName, String email, String phone,
 			String gender) {
 		super();
@@ -27,7 +24,12 @@ public class CustomerDTO {
 		this.phone = phone;
 		this.gender = gender;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "CustomerDTO [cid=" + cid + ", username=" + username + ", password=" + password + ", fullName="
+				+ fullName + ", email=" + email + ", phone=" + phone + ", gender=" + gender + "]";
+	}
 
 	@Override
 	public int hashCode() {
@@ -42,7 +44,6 @@ public class CustomerDTO {
 		result = prime * result + ((username == null) ? 0 : username.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -88,14 +89,6 @@ public class CustomerDTO {
 		return true;
 	}
 
-
-	@Override
-	public String toString() {
-		return "CustomerDTO [cid=" + cid + ", username=" + username + ", password=" + password + ", fullName="
-				+ fullName + ", email=" + email + ", phone=" + phone + ", gender=" + gender + "]";
-	}
-
-
 	public int getCid() {
 		return cid;
 	}
@@ -120,6 +113,14 @@ public class CustomerDTO {
 		this.password = password;
 	}
 
+	public FullName getFullName() {
+		return fullName;
+	}
+
+	public void setFullName(FullName fullName) {
+		this.fullName = fullName;
+	}
+
 	public String getEmail() {
 		return email;
 	}
@@ -136,26 +137,12 @@ public class CustomerDTO {
 		this.phone = phone;
 	}
 
-
-	public FullName getFullName() {
-		return fullName;
-	}
-
-
-	public void setFullName(FullName fullName) {
-		this.fullName = fullName;
-	}
-
-
 	public String getGender() {
 		return gender;
 	}
 
-
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-
-	
 
 }

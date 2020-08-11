@@ -1,12 +1,14 @@
 package com.customer.utils;
 
+import com.customer.dto.FullName;
+
 public class UsernameGenerator {
 
-	public static String usernameGenerator(String fName, String mName, String lName) {
-		String c1 = fName.substring(0, 1);
-		String c2 = mName.substring(0, 1);
+	public static String usernameGenerator(FullName fullname) {
+		String c1 = fullname.getfName().substring(0, 1);
+		String c2 = fullname.getmName().substring(0, 1);
 
-		String username = c1 + c2 + lName;
+		String username = c1 + c2 + fullname.getlName();
 		return username;
 	}
 }

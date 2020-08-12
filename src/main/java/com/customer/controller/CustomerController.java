@@ -23,14 +23,24 @@ public class CustomerController {
 		return "signup";
 	}
 
+	@GetMapping("result")
+	public String showResult() {
+		return "flightResults";
+	}
+
+	@GetMapping("search")
+	public String search() {
+		return "flight";
+	}
+
 	@PostMapping("/signup")
-	public String createSignup(@ModelAttribute CustomerDTO customerDTO,@ModelAttribute FullName fullName
-			, Model model) {
+	public String createSignup(@ModelAttribute CustomerDTO customerDTO, @ModelAttribute FullName fullName,
+			Model model) {
 		customerDTO.setFullName(fullName);
-		String username= UsernameGenerator.usernameGenerator(customerDTO.getFullName());
+		String username = UsernameGenerator.usernameGenerator(customerDTO.getFullName());
 		customerDTO.setUsername(username);
 		customerService.signUp(customerDTO);
-		model.addAttribute("hmmmm","Successfully Registerd");
+		model.addAttribute("hmmmm", "Successfully Registerd");
 		return "login";
 	}
 }

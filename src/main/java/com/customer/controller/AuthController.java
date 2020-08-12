@@ -22,11 +22,6 @@ public class AuthController {
 		return "login";
 	}
 
-	@GetMapping({ "result" })
-	public String showResult() {
-		return "flightResults";
-	}
-
 	
 	@PostMapping("/auth")
 	public String authUser(@RequestParam String usernameOrEmail, @RequestParam String password, HttpSession session,

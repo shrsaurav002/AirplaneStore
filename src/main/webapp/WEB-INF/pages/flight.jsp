@@ -71,7 +71,11 @@ body {
     <div class="Logo">
  <img src="img/logoairlines.png"  style="height:150px;"></div>
     <h1>Welcome Aboard!!</h1>
-    <p><h5>Chiluminati is the most popular Airline for travelling around the globe. Explore daily!!</h5></p>
+    <p>
+    <h5>
+    Chiluminati is the most popular Airline for travelling around the globe. Explore daily!!
+    </h5>
+    </p>
     </div>
     </div>
   <hr/>

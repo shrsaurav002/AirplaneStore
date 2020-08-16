@@ -14,8 +14,6 @@ public class FlightEntity {
 	@Column
 	private String planeName;
 	@Column
-	private String day;
-	@Column
 	private String depTime;
 	@Column
 	private String arrTime;
@@ -30,7 +28,7 @@ public class FlightEntity {
 
 	@Override
 	public String toString() {
-		return "FlightEntity [fid=" + fid + ", planeName=" + planeName + ", day=" + day + ", depTime=" + depTime
+		return "FlightEntity [fid=" + fid + ", planeName=" + planeName + ", depTime=" + depTime
 				+ ", arrTime=" + arrTime + ", seats=" + seats + ", price=" + price + "]";
 	}
 
@@ -55,13 +53,6 @@ public class FlightEntity {
 		this.planeName = planeName;
 	}
 
-	public String getDay() {
-		return day;
-	}
-
-	public void setDay(String day) {
-		this.day = day;
-	}
 
 	public String getDepTime() {
 		return depTime;
@@ -111,12 +102,11 @@ public class FlightEntity {
 		this.price = price;
 	}
 
-	public FlightEntity(String fid, String planeName, String day, String depTime, String arrTime, String depCity,
+	public FlightEntity(String fid, String planeName,  String depTime, String arrTime, String depCity,
 			String arrCity, int seats, int price) {
 		super();
 		this.fid = fid;
 		this.planeName = planeName;
-		this.day = day;
 		this.depTime = depTime;
 		this.arrTime = arrTime;
 		this.depCity = depCity;

@@ -1,5 +1,7 @@
 package com.customer.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,6 +10,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.customer.dto.CustomerDTO;
+import com.customer.dto.FlightDTO;
 import com.customer.dto.FullName;
 import com.customer.service.CustomerService;
 import com.customer.utils.UsernameGenerator;
@@ -24,12 +27,16 @@ public class CustomerController {
 	}
 
 	@GetMapping("result")
-	public String showResult() {
+	public String showResult(Model model) {
+		List<FlightDTO> flightDTOs = customerService.findAllFlights();
+		System.out.println(flightDTOs);
+		model.addAttribute("flights", flightDTOs);
 		return "flightResults";
 	}
 
 	@GetMapping("search")
-	public String search() {
+	public String search(Model model) {
+
 		return "flight";
 	}
 

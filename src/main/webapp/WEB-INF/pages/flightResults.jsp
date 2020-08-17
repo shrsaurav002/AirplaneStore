@@ -1,10 +1,11 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Flights</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -17,7 +18,7 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-	
+
 <style type="text/css">
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -60,338 +61,51 @@ body {
 <body>
 	<%@include file="styles/header.jsp"%>
 	<div id="sidebar-left" style="border-right: 1px solid #416f1e;">
-	
-<a href="auth" style="color:white">
-<button  class="btn btn-primary" style="width: 100%">LogIn<br></button></a><br>
-		 <a href="signup" style="color:white">	
-		 <button  class="btn btn-info" style="width: 100%">SignUp</button></a><br>
-		<a href="search"style="color:white">	
-		<button  class="btn btn-primary" style="width: 100%">Search for New Flights</button></a><br>
+
+		<a href="auth" style="color: white">
+			<button class="btn btn-primary" style="width: 100%">
+				LogIn<br>
+			</button>
+		</a><br> <a href="signup" style="color: white">
+			<button class="btn btn-info" style="width: 100%">SignUp</button>
+		</a><br> <a href="search" style="color: white">
+			<button class="btn btn-primary" style="width: 100%">Search
+				for New Flights</button>
+		</a><br>
 	</div>
-<div id="sidebar-right"></div>
-<div id="footer" >Bottom</div>
+	<div id="sidebar-right"></div>
+	<div id="footer">Bottom</div>
 	<div id="main" style="background-color: lightgray;">
+
 		<table class="table">
-			<thead>
-				<tr>	
+
+			<thead style="background-color: gray; overflow: visible;">
+
+				<tr>
 					<th scope="col">#</th>
 					<th scope="col">Flight Id</th>
 					<th scope="col">Plane</th>
 					<th scope="col">Depart Time</th>
 					<th scope="col">Arrival Time</th>
 					<th scope="col">Available Seats</th>
-					<th scope="col">Price</th>
+					<th scope="col">Book</th>
+					<!-- <th scope="col">Book</th> -->
 				</tr>
 			</thead>
 			<tbody>
+				<c:forEach items="${flights}" var="flightDTO" varStatus="sNo">
+					<tr>
+						<th scope="row">${sNo.count }</th>
+						<td>${flightDTO.fid }</td>
+						<td>${flightDTO.planeName }</td>
+						<td>${flightDTO.depTime }</td>
+						<td>${flightDTO.arrTime }</td>
+						<td>${flightDTO.seats }</td>
+						<td>$ ${flightDTO.price }</td>
+						<!-- <td><img src="img/flight.png" height=30px></td> -->
+					</tr>
+				</c:forEach>
 				<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-<tr>
-					<th scope="row">1</th>
-					<td>BNSDK</td>
-					<td>Boeing</td>
-					<td>7:30 AM</td>
-					<td>10:30 AM</td>
-					<td>25</td>
-					<td>$325</td>
-				</tr>
-
-<tr>
 					<th scope="row"></th>
 					<td></td>
 					<td></td>
@@ -406,7 +120,7 @@ body {
 
 	</div>
 
-	
-	
+
+
 </body>
 </html>

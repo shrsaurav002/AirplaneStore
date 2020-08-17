@@ -1,5 +1,6 @@
 package com.customer.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -10,8 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.customer.dto.CustomerDTO;
+import com.customer.dto.FlightDTO;
 import com.customer.entity.CustomerEntity;
+import com.customer.entity.FlightEntity;
 import com.customer.jpa.DaoRepository;
+import com.customer.jpa.FlightRepository;
 
 @Service
 @Transactional
@@ -19,6 +23,8 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Autowired
 	private DaoRepository daoRepository;
+	@Autowired
+	private FlightRepository flightRespository;
 
 	@Override
 	public CustomerDTO authUser(String usernameOrEmail, String pusernameOrEmail, String password) {
@@ -60,7 +66,7 @@ public class CustomerServiceImpl implements CustomerService {
 
 	@Override
 	public List<CustomerEntity> findByCity() {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 
@@ -74,6 +80,23 @@ public class CustomerServiceImpl implements CustomerService {
 	public String fUsername(String email) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public List<FlightDTO> findAllFlights() {
+		List<FlightEntity> flightEntities = flightRespository.findAll();
+		List<FlightDTO> flightDTOs = convertFlight(flightEntities);
+		return flightDTOs;
+	}
+
+	private List<FlightDTO> convertFlight(List<FlightEntity> entities) {
+		List<FlightDTO> dtos = new ArrayList<>();
+		for (FlightEntity f : entities) {
+			FlightDTO flightdto = new FlightDTO();
+			BeanUtils.copyProperties(f, flightdto);
+			dtos.add(flightdto);
+		}
+		return dtos;
 	}
 
 }
